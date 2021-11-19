@@ -1,21 +1,27 @@
 import { Component } from 'react';
+import data from "./data/productData";
 import "./App.css";
-import data from './data/productData'
+
+
 
 class App extends Component{
   constructor(){
     super();
     this.state ={
-      products: data.productData
+      // productList: data.productData,
+      
+      
 
     }
 }
   render(){
-
+    //  let productElArr = this.state.productList.map(()=>{
+    //  })
+    
 
     return (
     <div className="app">
-      <h1>MY GARAGE SALE</h1>
+      <h1>My Garage Sale</h1>
       
       <div>
      <section className="cart">
@@ -30,12 +36,36 @@ class App extends Component{
 
         <div className="products">
           
-            <div>Baseball Glove:</div>
-            <div>Vintage VCR</div>
-            <div>Rusty Bicycle</div>
-            <div>Mismatched Socks</div>
-            <div>Old Newspapers</div>
-            <div>Comfy Armchair</div>
+            <div>
+              Baseball Glove
+           <button type="submit">Add to Cart</button>
+            </div>
+
+            <div>
+              Vintage VCR
+            <button type="submit">Add to Cart</button>
+            </div>
+
+            <div>
+              Rusty Bicycle
+            <button type="submit">Add to Cart</button>
+            </div>
+
+            <div>
+              Mismatched Socks
+            <button type="submit">Add to Cart</button>
+            </div>
+
+            <div>
+              Old Newspapers
+            <button type="submit">Add to Cart</button>
+            </div>
+
+            <div>
+              Comfy Armchair
+            <button type="submit">Add to Cart</button>
+            </div>
+
         </div>
       
       
@@ -61,9 +91,12 @@ class App extends Component{
          <br />
         <label htmlFor="zip-code">Zip Code: </label>
         <br />
-        <input type="number" value="" id="zip-code"/>
+        <input 
+        type="number" 
+        value="" 
+        id="zip-code"/>
          <br />
-        <button>Buy Now</button>
+        <button type="submit">Buy Now</button>
         
       </form>
       </section>
